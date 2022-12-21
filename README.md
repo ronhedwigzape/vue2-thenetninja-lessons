@@ -1,2 +1,17 @@
-# vue2-thenetninja-lesson-17
- 
+# vue2-thenetninja
+
+#### Install dependencies
+```sh
+npm install
+```
+
+#### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
+```
+
+#### Compile and Minify for Production
+
+```sh
+npm run build
