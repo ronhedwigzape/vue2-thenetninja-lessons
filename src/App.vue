@@ -1,24 +1,32 @@
 <template>
     <div>
       <app-header></app-header>
-<!--      <h1>{{ title }}</h1>-->
-      <ninjas></ninjas>
+      <app-ninjas v-bind:ninjas="ninjas"></app-ninjas>
+      <app-footer></app-footer>
     </div>
 </template>
 
 <script>
-// import Ninjas from './Ninjas.vue'
-
-import Header from './components/Header.vue'
+import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
+import Ninjas from './components/Ninjas.vue';
 
 export default {
     components: {
-      // 'ninjas': Ninjas,
-      'app-header': Header
+      'app-ninjas': Ninjas,
+      'app-header': Header,
+      'app-footer': Footer
     },
     data() {
         return {
-           // title: 'Ninja App'
+          ninjas: [
+            {name: 'Ryu',specialty: 'Vue Components', show: false},
+            {name: 'Crystal',specialty: 'HTML Wizardry', show: false},
+            {name: 'Hitoshi',specialty: 'Click Events', show: false},
+            {name: 'Tango',specialty: 'Conditionals', show: false},
+            {name: 'Kami',specialty: 'Webpack', show: false},
+            {name: 'Yoshi',specialty: 'Data Diggin', show: false}
+          ]
         }
     }
 }
@@ -28,4 +36,5 @@ export default {
 h1 {
   color: aqua;
 }
+
 </style>
