@@ -1,8 +1,8 @@
 <template>
     <div>
-      <app-header></app-header>
+      <app-header v-bind:title="title"></app-header>
       <app-ninjas v-bind:ninjas="ninjas"></app-ninjas>
-      <app-footer></app-footer>
+      <app-footer v-bind:title="title"></app-footer>
     </div>
 </template>
 
@@ -13,9 +13,9 @@ import Ninjas from './components/Ninjas.vue';
 
 export default {
     components: {
-      'app-ninjas': Ninjas,
       'app-header': Header,
-      'app-footer': Footer
+      'app-footer': Footer,
+      'app-ninjas': Ninjas
     },
     data() {
         return {
@@ -26,7 +26,8 @@ export default {
             {name: 'Tango',specialty: 'Conditionals', show: false},
             {name: 'Kami',specialty: 'Webpack', show: false},
             {name: 'Yoshi',specialty: 'Data Diggin', show: false}
-          ]
+          ],
+          title: 'Vue Ninjas'
         }
     }
 }
