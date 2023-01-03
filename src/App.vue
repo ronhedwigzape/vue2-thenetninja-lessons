@@ -3,10 +3,25 @@
 <!--      <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>-->
 <!--      <app-ninjas v-bind:ninjas="ninjas"></app-ninjas>-->
 <!--      <app-footer v-bind:title="title"></app-footer>-->
-      <form-helper>
-        <h2 slot="title">I am the slot title</h2>
-        <p slot="text">I am the paragraph text for the slot</p>
-      </form-helper>
+<!--      <form-helper>-->
+<!--        <div slot="form-header">-->
+<!--          <h3>This is the title of the form</h3>-->
+<!--          <p>Information about the form</p>-->
+<!--        </div>-->
+<!--        <div slot="form-fields">-->
+<!--          <input type="text" placeholder="name" required>-->
+<!--          <input type="password" placeholder="password" required>-->
+<!--        </div>-->
+<!--        <div slot="form-controls">-->
+<!--          <button v-on:click="handleSubmit">Submit</button>-->
+<!--        </div>-->
+<!--     </form-helper>-->
+<!--      <keep-alive>-->
+<!--        <component v-bind:is="component"></component>-->
+<!--      </keep-alive>-->
+<!--      <button v-on:click="component = 'form-one'">Show Form One</button>-->
+<!--      <button v-on:click="component = 'form-two'">Show Form Two</button>-->
+   <add-blog></add-blog>
     </div>
 </template>
 
@@ -14,17 +29,22 @@
 // import Header from './components/Header.vue';
 // import Footer from './components/Footer.vue';
 // import Ninjas from './components/Ninjas.vue';
-import formHelper from "./components/formHelper.vue";
+// import formOne from "./components/formOne.vue";
+// import formTwo from "./components/formTwo.vue";
+import addBlog from "./components/addBlog.vue";
 
 export default {
     components: {
+      'add-blog': addBlog
       // 'app-header': Header,
       // 'app-footer': Footer,
       // 'app-ninjas': Ninjas
-      'form-helper': formHelper
+      // 'form-one': formOne,
+      // 'form-two': formTwo
     },
     data() {
         return {
+          // component: 'form-two'
           // ninjas: [
           //   {name: 'Ryu',specialty: 'Vue Components', show: false},
           //   {name: 'Crystal',specialty: 'HTML Wizardry', show: false},
@@ -45,8 +65,9 @@ export default {
 </script>
 
 <style scoped>
-h1 {
-  color: aqua;
+body {
+  margin: 0;
+  font-family: 'Nunito SemiBold';
 }
 
 </style>
