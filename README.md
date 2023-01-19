@@ -1,5 +1,7 @@
 # vue2-thenetninja
 
+### Learnings of Vue 2 from TheNetNinja
+
 #### Install dependencies
 ```sh
 npm install
