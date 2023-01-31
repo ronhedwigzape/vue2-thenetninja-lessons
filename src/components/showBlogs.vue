@@ -3,7 +3,9 @@
 <!--  Custom directive  -->
   <div v-theme:column="'narrow'" id="show-blogs">
     <h1>All Blog Articles</h1>
-    <div v-for="blog in blogs" class="single-blog">
+    <input type="text" v-model="search" placeholder="search blogs">
+    <div v-for="blog in filteredBlogs" class="single-blog">
+                          <!--    Filters    -->
       <h2 v-rainbow>{{ blog.title | to-uppercase }} ID: {{ blog.userId }}</h2>
       <article>{{ blog.body | snippet }}</article>
     </div>
@@ -12,6 +14,8 @@
 </template>
 
 <script>
+import searchMixin from "../mixins/searchMixin.js";
+
 export default {
   name: "showBlogs",
   created(){
@@ -21,9 +25,28 @@ export default {
   },
   data() {
     return {
-      blogs: []
+      blogs: [],
+      search: ''
     }
-  }
+  },
+  computed:{
+
+  },
+  // Registering custom filter locally
+  filters: {
+    toUppercase(value) {
+      return value.toUpperCase()
+    }
+  },
+  // Registering custom directives locally
+  directives: {
+    'rainbow': {
+      bind(el, binding, vnode) {
+        el.style.color = '#' + Math.random().toString().slice(2,8);
+      }
+    }
+  },
+  mixins: [searchMixin]
 }
 </script>
 
