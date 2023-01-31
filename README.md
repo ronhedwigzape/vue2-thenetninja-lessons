@@ -1,4 +1,4 @@
-# vue2-thenetninja
+# vue-thenetninja
 
 ### Learnings of Vue 2 from TheNetNinja
 
