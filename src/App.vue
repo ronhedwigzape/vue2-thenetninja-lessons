@@ -22,8 +22,8 @@
 <!--      <button v-on:click="component = 'form-one'">Show Form One</button>-->
 <!--      <button v-on:click="component = 'form-two'">Show Form Two</button>-->
 <!--   <add-blog></add-blog>-->
-      <show-blogs></show-blogs>
-      <list-blogs></list-blogs>
+      <app-header></app-header>
+      <router-view></router-view>
     </div>
 </template>
 
@@ -36,14 +36,15 @@
 import addBlog from "./components/addBlog.vue";
 import showBlogs from "./components/showBlogs.vue";
 import listBlogs from "./components/listBlogs.vue";
+import Header from "./components/Header.vue";
 
 export default {
     components: {
       'add-blog': addBlog,
       'show-blogs': showBlogs,
-      'list-blogs': listBlogs
+      'list-blogs': listBlogs,
+      'app-header': Header,
 
-      // 'app-header': Header,
       // 'app-footer': Footer,
       // 'app-ninjas': Ninjas
       // 'form-one': formOne,
