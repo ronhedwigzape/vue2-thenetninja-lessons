@@ -1,6 +1,6 @@
-# vue-thenetninja
+# vue2-thenetninja
 
-### Learnings of Vue 2 & 3 from TheNetNinja
+### Learnings of Vue 2 from TheNetNinja
 
 #### Install dependencies
 ```sh
